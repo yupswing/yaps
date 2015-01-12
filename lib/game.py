@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.91
+#  YetAnotherPythonSnake 0.92
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
@@ -69,9 +69,9 @@ class Game:
         walls = Walls(self.unit)
         score = Score(self.unit,self.surface_rect)
 
-        nextgold = random.randint(30,60) * Constants.FPS # first gold between 30 & 60 seconds
+        nextgold = random.randint(*Constants.TIMERANGE_GOLD) * Constants.FPS # first gold between 30 & 60 seconds
         makegold = False
-        nextwall = random.randint(5,15) * Constants.FPS # first gold between 30 & 60 seconds
+        nextwall = random.randint(*Constants.TIMERANGE_WALL) * Constants.FPS # first gold between 30 & 60 seconds
         makewall = False
 
         updatestats = True
@@ -151,13 +151,13 @@ class Game:
             nextgold-=1
             if nextgold<0:
                 makegold = True
-                nextgold = random.randint(30,60)*Constants.FPS
+                nextgold = random.randint(*Constants.TIMERANGE_GOLD)*Constants.FPS
 
             # Wall generator (After pseudo-random time a wall will appear)
             nextwall-=1
             if nextwall<0:
                 makewall = True
-                nextwall = random.randint(5,15)*Constants.FPS
+                nextwall = random.randint(*Constants.TIMERANGE_WALL)*Constants.FPS
 
             # Foods request to create an apple
             # Game has to provide to Foods the list of forbidden blocks

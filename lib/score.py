@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.91
+#  YetAnotherPythonSnake 0.92
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
@@ -26,7 +26,7 @@ class Score(object):
         self.score = 0
         self.seconds = 0
         self.length = 0
-        self.font = pygame.font.Font(data.filepath("font", "abel.otf"), int(self.unit*2.3))
+        self.font = pygame.font.Font(data.filepath("font", "abel.ttf"), int(self.unit*2.3))
 
         self.sprites = []
         self.sprites.append(FoodBlock(self.unit*2,(4,1),FoodBlockKind.APPLE))
@@ -51,14 +51,13 @@ class Score(object):
 
         lines = [str(self.score),self.elapse]
 
-
         for ii in range(len(lines)):
             text = lines[ii]
             sprite = self.sprites[ii]
             text = self.font.render(text, True, (255,255,255))
             textRect = text.get_rect()
             textRect.right = self.image.get_rect().right-int(self.unit*4)
-            textRect.y = int(self.unit*(ii*4+2.4))
+            textRect.y = int(self.unit*(ii*4+1.6))
             self.image.blit(text, textRect)
             self.image.blit(sprite.image, sprite.rect)
 

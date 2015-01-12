@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.91
+#  YetAnotherPythonSnake 0.92
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
@@ -25,9 +25,12 @@ class Constants:
     HIGHSCORES_FILE = os.path.join('local','highscores')
     PREFERENCES_FILE = os.path.join('local','preferences')
 
+    TIMERANGE_WALL = (1,5)
+    TIMERANGE_GOLD = (55,65)
+
     GROW = 1
 
-    CREDITS = """*Yet Another Python Snake (YAPS v0.91)
+    CREDITS = """*Yet Another Python Snake (YAPS v0.92)
 This game was made, as a personal exercise with python
 and pygame, in a few days in June 2012
 It's free, licensed under Creative Commons BY-NC 3.0

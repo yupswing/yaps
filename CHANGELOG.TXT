@@ -2,6 +2,9 @@
 YET ANOTHER PYTHON SNAKE
 ========================
 
+YAPS 0.92 [2012/06/??]
++ ...
+
 YAPS 0.91 [2012/06/27]
 + fullscreen mode on/off
 # some fixes to ensure compatibility with python3 [not tested]
