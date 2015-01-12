@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.9
+#  YetAnotherPythonSnake 0.91
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
@@ -13,14 +13,15 @@ import util
 from constants import Constants
 
 #YASP imports 
-from highscore import Highscore
+from highscores import Highscores
 from sound_engine import MusicPlayer
 from gui import MenuButton
 
 class TitleScreen:
-    def __init__(self, screen, unit):
+    def __init__(self, screen, unit, preferences):
         self.screen = screen
         self.unit = unit
+        self.preferences = preferences
         self.running = True
         self.music_player = MusicPlayer("title.mp3")
         self.clock = pygame.time.Clock()
@@ -43,33 +44,36 @@ class TitleScreen:
     def main(self):
         self.music_player.play()
 
-        img_title = pygame.transform.smoothscale(self.img_title,util.scale(self.img_title,width=self.unit*40))
+        img_title = pygame.transform.smoothscale(self.img_title,util.scale(self.img_title,width=self.unit*35))
         img_title_rect = img_title.get_rect()
         img_title_rect.centerx = self.screen.get_rect().centerx
         img_title_rect.y = self.unit*3
 
-
         self.choice = 0
         start_game = False
 
-        btn_play = MenuButton("PLAY",self.unit,(self.unit*15, self.unit*3))
+        btn_play = MenuButton("PLAY",self.unit,(self.unit*17, self.unit*3))
         btn_play.rect.centerx = self.screen.get_rect().centerx
-        btn_play.rect.y = self.unit*33
+        btn_play.rect.y = self.unit*29
         btn_play.set_status(1)
 
-        btn_highscore = MenuButton("HIGHSCORE",self.unit,(self.unit*15, self.unit*3))
-        btn_highscore.rect.centerx = self.screen.get_rect().centerx
-        btn_highscore.rect.y = self.unit*37
+        btn_highscores = MenuButton("HIGH SCORES",self.unit,(self.unit*17, self.unit*3))
+        btn_highscores.rect.centerx = self.screen.get_rect().centerx
+        btn_highscores.rect.y = self.unit*33
 
-        btn_credits = MenuButton("CREDITS",self.unit,(self.unit*15, self.unit*3))
+        btn_fullscreen = MenuButton(["FULLSCREEN OFF","FULLSCREEN ON"][self.preferences.get('fullscreen')],self.unit,(self.unit*17, self.unit*3))
+        btn_fullscreen.rect.centerx = self.screen.get_rect().centerx
+        btn_fullscreen.rect.y = self.unit*37
+
+        btn_credits = MenuButton("CREDITS",self.unit,(self.unit*17, self.unit*3))
         btn_credits.rect.centerx = self.screen.get_rect().centerx
         btn_credits.rect.y = self.unit*41
 
-        btn_exit = MenuButton("QUIT",self.unit,(self.unit*15, self.unit*3))
+        btn_exit = MenuButton("QUIT",self.unit,(self.unit*17, self.unit*3))
         btn_exit.rect.centerx = self.screen.get_rect().centerx
         btn_exit.rect.y = self.unit*45
         buttons = pygame.sprite.Group()
-        buttons.add([btn_play,btn_highscore,btn_credits,btn_exit])
+        buttons.add([btn_play,btn_fullscreen,btn_highscores,btn_credits,btn_exit])
 
         dbg = util.debugBackground(self.size,self.unit)
         self.draw_background()
@@ -87,9 +91,13 @@ class TitleScreen:
                         if self.choice == 0:
                             start_game = True
                         elif self.choice == 1:
-                            self.highscore()
+                            self.highscores()
                             self.draw_background()
                         elif self.choice == 2:
+                            # return to MAIN.PY to save prefs and apply fullscreen mode
+                            self.preferences.set('fullscreen',not self.preferences.get('fullscreen'))
+                            return
+                        elif self.choice == 3:
                             self.credits()
                             self.draw_background()
                         else:
@@ -104,16 +112,18 @@ class TitleScreen:
                     self.running = False
                     return
             if self.choice != last_choice:
-                if self.choice < 0: self.choice = 3
-                elif self.choice > 3: self.choice = 0
+                if self.choice < 0: self.choice = 4
+                elif self.choice > 4: self.choice = 0
                 btn_play.set_status(0)
-                btn_highscore.set_status(0)
+                btn_highscores.set_status(0)
+                btn_fullscreen.set_status(0)
                 btn_credits.set_status(0)
                 btn_exit.set_status(0)
                 if self.choice == 0: btn_play.set_status(1)
-                elif self.choice == 1: btn_highscore.set_status(1)
-                elif self.choice == 2: btn_credits.set_status(1)
-                elif self.choice == 3: btn_exit.set_status(1)
+                elif self.choice == 1: btn_highscores.set_status(1)
+                elif self.choice == 2: btn_fullscreen.set_status(1)
+                elif self.choice == 3: btn_credits.set_status(1)
+                elif self.choice == 4: btn_exit.set_status(1)
                 last_choice = self.choice
 
             buttons.update()
@@ -123,21 +133,21 @@ class TitleScreen:
             self.clock.tick(30)
         self.music_player.stop()
 
-    def highscore(self,scored=False):
+    def highscores(self,scored=False):
         #scored = {'elapse':str,'score':int,'index':int,'scored':bool}
 
         back = False
 
-        btn_back = MenuButton("BACK",self.unit,(self.unit*15, self.unit*3))
+        btn_back = MenuButton("BACK",self.unit,(self.unit*17, self.unit*3))
         btn_back.rect.centerx = self.screen.get_rect().centerx
         btn_back.rect.y = self.unit*45
         btn_back.set_status(1)
 
         self.draw_background()
 
-        highscore = Highscore()
+        highscores = Highscores()
         if scored and not scored['scored']:
-            highscore.insert("Your name",str(scored["score"]),scored["elapse"])
+            highscores.insert("Your name",str(scored["score"]),scored["elapse"])
 
         box = pygame.Surface((self.size[1],self.size[1]))
         box.fill((255,255,255))
@@ -158,7 +168,7 @@ class TitleScreen:
         btn_back.update()
         self.screen.blit(btn_back.image, btn_back.rect)
 
-        title = font_title.render("HIGHSCORE",True,color_title)
+        title = font_title.render("HIGH SCORES",True,color_title)
         rect = title.get_rect()
         rect.centerx = self.screen.get_rect().centerx
         rect.y = 1*self.unit
@@ -173,7 +183,7 @@ class TitleScreen:
         line_me.fill((30,200,30))
         line_me.set_alpha(50)
         ii=0
-        for el in highscore.scores:
+        for el in highscores.scores:
             index = font_text.render(str(ii+1),True,color_title)
             name = font_text.render(el["name"],True,color_text)
             elapse = font_text.render(el["elapse"],True,color_text)
@@ -221,7 +231,7 @@ class TitleScreen:
 
         back = False
 
-        btn_back = MenuButton("BACK",self.unit,(self.unit*15, self.unit*3))
+        btn_back = MenuButton("BACK",self.unit,(self.unit*17, self.unit*3))
         btn_back.rect.centerx = self.screen.get_rect().centerx
         btn_back.rect.y = self.unit*45
         btn_back.set_status(1)

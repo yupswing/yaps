@@ -16,7 +16,7 @@ OPTIONS = {'argv_emulation': False,
            'packages': PACKAGES ,
            'includes' : MODULES }
 DATA_FILES = []
-DATA_FILES = ["data","lib","README.TXT"]
+DATA_FILES = ["data","lib","local","README.TXT","CHANGELOG.TXT"]
 
 setup(
     app=APP,

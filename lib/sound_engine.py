@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.9
+#  YetAnotherPythonSnake 0.91
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
@@ -33,12 +33,11 @@ class SoundPlayer:
     def load_sound(self,filename):
         if not pygame.mixer: return dummysound()
         filepath = data.filepath("sfx",filename)
-        try:
+        if filepath:
             sound = pygame.mixer.Sound(filepath)
             return sound
-        except pygame.error:
-            print ('WARNING: Unable to load %s' % filepath)
-        return dummysound()
+        else:
+            return dummysound()
 
 class MusicPlayer:
     def __init__(self, filename=None):

@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 #
-#  YetAnotherPythonSnake 0.9
+#  YetAnotherPythonSnake 0.91
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]

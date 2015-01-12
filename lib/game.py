@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.9
+#  YetAnotherPythonSnake 0.91
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://imente.it
 #  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
@@ -22,14 +22,15 @@ from object_snake import Snake
 from object_foods import Foods
 from object_walls import Walls
 from score import Score
-from highscore import Highscore
+from highscores import Highscores
 from title_screen import TitleScreen
 
 
 class Game:
-    def __init__(self, screen, unit):
+    def __init__(self, screen, unit, preferences):
         self.screen = screen
         self.unit = unit
+        self.preferences = preferences
         self.running = True
 
         self.sounds = SoundPlayer((('fall','fall.wav'),('ding','ding.wav'),('eat','eat.wav'),('move','move.wav'),('splat','splat.wav')))
@@ -59,7 +60,7 @@ class Game:
         self.screen.fill((0,0,0))
         self.screen.blit(self.img_background,self.img_background_rect)
 
-        highscore = Highscore()
+        highscores = Highscores()
 
         # Main instances
         pavement = Pavement(self.unit)
@@ -222,7 +223,7 @@ class Game:
 
             self.print_text("GAME OVER")
 
-            if highscore.check(score.score,score.elapse):
+            if highscores.check(score.score,score.elapse):
                 current_string = ''
                 complete = False
 
@@ -259,8 +260,8 @@ class Game:
                         inputbox.update()
                         inputbox.draw(self.screen)
                         pygame.display.update()
-                position = highscore.insert(current_string,score.score,score.elapse)
-                highscore.save()
+                position = highscores.insert(current_string,score.score,score.elapse)
+                highscores.save()
                 scored = {'index':position,'scored':True}
             else:
                 counter = Constants.FPS*3 # 3 seconds
@@ -275,8 +276,8 @@ class Game:
 
                 scored = {'elapse':score.elapse,'score':score.score,'scored':False}
 
-            ts = TitleScreen(self.screen,self.unit)
-            ts.highscore(scored)
+            ts = TitleScreen(self.screen,self.unit,self.preferences)
+            ts.highscores(scored)
             del ts
 
         self.music.stop()
