@@ -1,37 +1,32 @@
 
 # YET ANOTHER PYTHON SNAKE
-========================
 
-YetAnotherPythonSnake 0.92
-Author: Simone Cingano (simonecingano@gmail.com)
-Web: http://simonecingano.it
-Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
-Pygame Website: http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html
+**YetAnotherPythonSnake** 0.92<br/>
+**Author:** Simone Cingano (simonecingano@gmail.com)<br/>
+**Web:** http://simonecingano.it<br/>
+**Licence:** (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]<br/>
+**Pygame Website:** http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html
 
 
 ## DEPENDENCIES
-============
 
 You might need to install some of these before running the game:
 
-  Python:     http://www.python.org/
-  PyGame:     http://www.pygame.org/
+  __Python:__     http://www.python.org/
+  __PyGame:__     http://www.pygame.org/
 
 (game tested on Python 2.7 and PyGame 1.9 on Linux and Mac OS X)
 
 
 
 ## RUNNING THE GAME
-================
 
 Open a terminal/console and "cd" to the game directory and run:
-
-  python yaps.py
+```python yaps.py```
 
 
 
 ## HOW TO PLAY THE GAME
-====================
 
 Arrows or WASD to move
 P to pause
@@ -43,8 +38,8 @@ Black Blocks appear casually on the map. Avoid them!
 And last, but not least, don't eat yourself!
 
 
-## SOME INFOS
-==========
+## SOME INFOS AND CREDITS
+
 This game is brought to you by Simone Cingano's not-so-skilled hands.
 
 I took inspiration from Invention by XASM Studio to learn how
@@ -55,18 +50,17 @@ in the code.
 
 Anyway... let me give credit who deserves it:
 
-_*Sound & Music*_
-NLM, Setuniman, Rock Savage, j1987, qubodup, theta4, Freqman
+**Sound & Music**<br/>
+NLM, Setuniman, Rock Savage, j1987, qubodup, theta4, Freqman <br/>
 (CC) freesound.org
 
-_*Title Background Photo*_
-"Close up grass" by Sam Kim
+**Title Background Photo**<br/>
+"Close up grass" by Sam Kim <br/>
 (CC) flickr.com"
 
 PS: There is no active website, I'm workin' on it
 
 ## CHANGELOG
-========================
 
 YAPS 0.92 [not officially released yet]
 + minor fixes
