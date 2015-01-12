@@ -2,10 +2,10 @@
 # YET ANOTHER PYTHON SNAKE
 
 **YetAnotherPythonSnake** 0.92<br/>
-**Author:** Simone Cingano (simonecingano@gmail.com)<br/>
-**Web:** http://simonecingano.it<br/>
+**Author:** Simone Cingano (simonecingano@gmail.com) (http://simonecingano.it)<br/>
+**Pygame Page:** http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html
+**GIT Repository:** https://github.com/yupswing/yaps<br/>
 **Licence:** (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]<br/>
-**Pygame Website:** http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html
 
 
 ## DEPENDENCIES
