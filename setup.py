@@ -11,12 +11,12 @@ import setuptools
 PACKAGES = []
 MODULES = ["pygame"]
 
-APP = ['snake.py']
+APP = ['yaps.py']
 OPTIONS = {'argv_emulation': False,
            'packages': PACKAGES ,
            'includes' : MODULES }
 DATA_FILES = []
-DATA_FILES = ["data"]
+DATA_FILES = ["data","lib","README.TXT"]
 
 setup(
     app=APP,
