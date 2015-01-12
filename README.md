@@ -3,16 +3,16 @@
 
 **YetAnotherPythonSnake** 0.92<br/>
 **Author:** Simone Cingano (simonecingano@gmail.com) (http://simonecingano.it)<br/>
-**Pygame Page:** http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html
+**Pygame Page:** http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html<br/>
 **GIT Repository:** https://github.com/yupswing/yaps<br/>
-**Licence:** (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]<br/>
+**Licence:** (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
 
 
 ## DEPENDENCIES
 
 You might need to install some of these before running the game:
 
-  __Python:__     http://www.python.org/
+  __Python:__     http://www.python.org/<br/>
   __PyGame:__     http://www.pygame.org/
 
 (game tested on Python 2.7 and PyGame 1.9 on Linux and Mac OS X)
@@ -28,9 +28,9 @@ Open a terminal/console and "cd" to the game directory and run:
 
 ## HOW TO PLAY THE GAME
 
-Arrows or WASD to move
-P to pause
-M to toggle music
+```Arrows``` or ```WASD``` to move<br/>
+```P``` to pause<br/>
+```M``` to toggle music
 
 Red apples give 1 point
 Blue apples give 5 points (they disappear quickly)
