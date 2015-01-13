@@ -1,5 +1,5 @@
 
-# YET ANOTHER PYTHON SNAKE
+<img src="https://raw.githubusercontent.com/yupswing/yaps/master/data/title/credits.png" width="100%">
 
 **YetAnotherPythonSnake** 0.92<br/>
 **Author:** Simone Cingano (simonecingano@gmail.com) (http://simonecingano.it)<br/>
