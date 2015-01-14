@@ -5,7 +5,7 @@
 **Author:** Simone Cingano (simonecingano@gmail.com) (http://simonecingano.it)<br/>
 **Pygame Page:** http://www.pygame.org/project-YetAnotherPythonSnake-2393-.html<br/>
 **GIT Repository:** https://github.com/yupswing/yaps<br/>
-**Licence:** (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
+**Licence:** MIT
 
 
 ## DEPENDENCIES
@@ -15,7 +15,8 @@ You might need to install some of these before running the game:
   __Python:__     http://www.python.org/<br/>
   __PyGame:__     http://www.pygame.org/
 
-(game tested on Python 2.7 and PyGame 1.9 on Linux and Mac OS X)
+Game tested on Python 2.7 and PyGame 1.9 on Linux and Mac OS X<br/>
+(KNOWN PROBLEM ON PYTHON 3.0)
 
 
 
@@ -62,10 +63,9 @@ PS: There is no active website, I'm workin' on it
 
 ## CHANGELOG
 
-YAPS 0.92 [not officially released yet]
+YAPS 0.92 [2015/01/14]
 + minor fixes
-+ more than one level (to be implemented)
-+ code cleaning (to be done)
++ licence switched to MIT
 
 YAPS 0.91 [2012/06/27]
 + fullscreen mode on/off

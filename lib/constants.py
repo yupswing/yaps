@@ -1,8 +1,8 @@
 #
 #  YetAnotherPythonSnake 0.92
 #  Author: Simone Cingano (simonecingano@gmail.com)
-#  Web: http://imente.it
-#  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
+#  Web: http://simonecingano.it
+#  Licence: MIT
 #
 
 import os
@@ -33,8 +33,8 @@ class Constants:
     CREDITS = """*Yet Another Python Snake (YAPS v0.92)
 This game was made, as a personal exercise with python
 and pygame, in a few days in June 2012
-It's free, licensed under Creative Commons BY-NC 3.0
-Visit http://imente.it for more info and the source code
+It's free, licensed under MIT Licence
+Visit http://simonecingano.it for more info and the source code
 
 *Design & Programming
 Simone Cingano

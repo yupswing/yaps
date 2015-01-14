@@ -1,8 +1,8 @@
 #
 #  YetAnotherPythonSnake 0.92
 #  Author: Simone Cingano (simonecingano@gmail.com)
-#  Web: http://imente.it
-#  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
+#  Web: http://simonecingano.it
+#  Licence: MIT
 #
 
 import pygame
@@ -61,7 +61,7 @@ class TitleScreen:
         btn_highscores.rect.centerx = self.screen.get_rect().centerx
         btn_highscores.rect.y = self.unit*33
 
-        btn_fullscreen = MenuButton(["FULLSCREEN OFF","FULLSCREEN ON"][self.preferences.get('fullscreen')],self.unit,(self.unit*17, self.unit*3))
+        btn_fullscreen = MenuButton(["FULLSCREEN","WINDOWED"][self.preferences.get('fullscreen')],self.unit,(self.unit*17, self.unit*3))
         btn_fullscreen.rect.centerx = self.screen.get_rect().centerx
         btn_fullscreen.rect.y = self.unit*37
 

@@ -1,8 +1,8 @@
 #
 #  YetAnotherPythonSnake 0.92
 #  Author: Simone Cingano (simonecingano@gmail.com)
-#  Web: http://imente.it
-#  Licence: (CC) BY-NC 3.0 [http://creativecommons.org/licenses/by-nc/3.0/]
+#  Web: http://simonecingano.it
+#  Licence: MIT
 #
 
 import pygame
@@ -27,7 +27,7 @@ class BootScreen:
     def main(self):
         """ Display the screen and a little bit of text at the bottom
             of the screen. """
-        self.music_player.play()
+        self.music_player.once()
 
         img_logo = pygame.image.load(data.filepath("title","imente.png"))
         img_logo = pygame.transform.smoothscale(img_logo,util.scale(img_logo,width=self.unit*15))
@@ -37,13 +37,14 @@ class BootScreen:
 
         #settings
         seconds_in = 2
-        seconds_still = 2
+        seconds_still = 1
         seconds_out = 2
 
-        fps = 50
+        fps = 20
         logo_alpha = 0
-        logo_alpha_add = int((255/float(fps))/seconds_in)
-        logo_alpha_sub = int((255/float(fps))/seconds_out)
+        logo_alpha_add = int(255.0/float(fps*seconds_in))
+        logo_alpha_sub = -int(255.0/float(fps*seconds_out))
+        logo_alpha_sum = logo_alpha_add
         stop_counter = fps*seconds_still
 
         skip = False
@@ -64,14 +65,14 @@ class BootScreen:
             if logo_alpha == 255 and stop_counter > 0:
                 stop_counter-=1
             else:
-                logo_alpha += logo_alpha_add
+                logo_alpha += logo_alpha_sum
                 if logo_alpha > 255:
                     logo_alpha = 255
-                    logo_alpha_add = -10
+                    logo_alpha_sum = logo_alpha_sub
                 elif logo_alpha < 0:
                     break
 
             pygame.display.update()
-            self.clock.tick(50)
+            self.clock.tick(fps)
 
         self.music_player.stop()
