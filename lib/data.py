@@ -1,3 +1,10 @@
+#
+#  YetAnotherPythonSnake 0.92
+#  Author: Simone Cingano (simonecingano@gmail.com)
+#  Web: http://simonecingano.it
+#  Licence: MIT
+#
+
 import os
 data_dir = 'data'
 
