@@ -7,6 +7,12 @@
 **GIT Repository:** https://github.com/yupswing/yaps<br/>
 **Licence:** MIT
 
+## SCREENSHOTS
+
+<img src="https://dl.dropboxusercontent.com/u/683344/yaps/title.jpg" width="100%">
+<img src="https://dl.dropboxusercontent.com/u/683344/yaps/game.jpg" width="100%">
+<img src="https://dl.dropboxusercontent.com/u/683344/yaps/credits.jpg" width="100%">
+
 
 ## DEPENDENCIES
 
