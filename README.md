@@ -15,9 +15,9 @@
 
 ## SCREENSHOTS
 
-<img src="https://dl.dropboxusercontent.com/u/683344/yaps/title.jpg" width="100%">
-<img src="https://dl.dropboxusercontent.com/u/683344/yaps/game.jpg" width="100%">
-<img src="https://dl.dropboxusercontent.com/u/683344/yaps/credits.jpg" width="100%">
+![Title screen](README/title.jpg)
+![Game](README/game.jpg)
+![Credits](README/credits.jpg)
 
 ## DEPENDENCIES
 
