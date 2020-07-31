@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.92
+#  YetAnotherPythonSnake 0.93
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -72,7 +72,7 @@ class Highscores(object):
             for el in self.scores:
                 raw = self.cypher("%s,%s,%s" % (el["name"],el["elapse"],el["score"]))+'\n'
                 try:
-                    raw = bytes("raw","ascii") # python3
+                    raw = bytes(raw, "ascii") # python3
                 except:
                     pass
                 score_file.write(raw)
