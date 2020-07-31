@@ -1,4 +1,14 @@
+# Local data
 local/highscores
 local/preferences
-.vscode
-*.pyc
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+.eggs/
+
+# Env configuration
+.vscode/

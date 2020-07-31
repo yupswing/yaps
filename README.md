@@ -26,7 +26,7 @@ You might need to install some of these before running the game:
 **Python:** https://www.python.org/<br/>
 **PyGame:** https://www.pygame.org/
 
-Game tested on Python 2.7/3.0 and PyGame 1.9 on Linux and Mac OS X<br/>
+Game tested on Python 2.7/3.8 and PyGame 1.9 on Linux and Mac OS X<br/>
 
 ## RUNNING THE GAME
 
@@ -71,6 +71,8 @@ PS: There is no active website, I'm workin' on it
 **YAPS 0.93** [2020/07/31]
 
 - fix highscore
+- clean up code
+- testing python 3.8
 
 **YAPS 0.92** [2015/01/14]
 
