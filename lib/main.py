@@ -7,9 +7,7 @@
 
 import pygame
 
-#YASP common imports
-import data
-import util
+# YASP common imports
 import sys
 from constants import Constants
 
@@ -17,6 +15,7 @@ from title_screen import TitleScreen
 from boot_screen import BootScreen
 from game import Game
 from preferences import Preferences
+
 
 class Main:
     def __init__(self):
@@ -39,19 +38,20 @@ class Main:
 
     def go_mode(self):
         if self.fullscreen:
-            self.mode = (self.screen_w,self.screen_h)
-            if not self.mode in pygame.display.list_modes():
+            self.mode = (self.screen_w, self.screen_h)
+            if self.mode not in pygame.display.list_modes():
                 self.mode = pygame.display.list_modes()[0]
             self.screen = pygame.display.set_mode(self.mode, pygame.FULLSCREEN)
         else:
-            self.mode = (self.w,self.h)
+            self.mode = (self.w, self.h)
             self.screen = pygame.display.set_mode(self.mode)
         self.unit = int(self.mode[1]/Constants.UNITS)
 
     def main(self):
         self.boot_screen()
         while True:
-            if not self.title_screen(): break
+            if not self.title_screen():
+                break
             if self.preferences.edit_flag:
                 self.preferences.save()
                 fullscreen = self.preferences.get('fullscreen')
@@ -77,11 +77,13 @@ class Main:
         gm.main()
         return gm.running
 
+
 def main():
     game = Main()
     game.main()
     pygame.quit()
     sys.exit()
+
 
 if __name__ == "__main__":
     main()

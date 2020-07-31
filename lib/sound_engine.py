@@ -7,16 +7,17 @@
 
 import pygame
 
-#YASP common imports
+# YASP common imports
 import data
-import util
-from constants import Constants
 
 
-if pygame.mixer: pygame.mixer.init()
+if pygame.mixer:
+    pygame.mixer.init()
+
 
 class dummysound:
     def play(self): pass
+
 
 class SoundPlayer:
     def __init__(self, sounds):
@@ -24,28 +25,30 @@ class SoundPlayer:
         for s in sounds:
             self.load(*s)
 
-    def play(self,sound):
+    def play(self, sound):
         self.sounds[sound].play()
 
-    def load(self,key,filename):
+    def load(self, key, filename):
         self.sounds[key] = self.load_sound(filename)
 
-    def load_sound(self,filename):
-        if not pygame.mixer: return dummysound()
-        filepath = data.filepath("sfx",filename)
+    def load_sound(self, filename):
+        if not pygame.mixer:
+            return dummysound()
+        filepath = data.filepath("sfx", filename)
         if filepath:
             sound = pygame.mixer.Sound(filepath)
             return sound
         else:
             return dummysound()
 
+
 class MusicPlayer:
     def __init__(self, filename=None):
         if filename is not None:
-            pygame.mixer.music.load(data.filepath("music",filename))
+            pygame.mixer.music.load(data.filepath("music", filename))
 
     def load(self, filename):
-        pygame.mixer.music.load(data.filepath("music",filename))
+        pygame.mixer.music.load(data.filepath("music", filename))
 
     def play(self):
         pygame.mixer.music.play(-1)

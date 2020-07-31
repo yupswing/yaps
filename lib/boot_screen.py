@@ -7,16 +7,18 @@
 
 import pygame
 
-#YASP common imports
+# YASP common imports
 import data
 import util
-from constants import Constants
+# from constants import Constants
 
 # YAPS imports
 from sound_engine import MusicPlayer
 
+
 class BootScreen:
     """  The boot screen! """
+
     def __init__(self, screen, unit):
         self.screen = screen
         self.unit = unit
@@ -29,13 +31,14 @@ class BootScreen:
             of the screen. """
         self.music_player.once()
 
-        img_logo = pygame.image.load(data.filepath("title","imente.png"))
-        img_logo = pygame.transform.smoothscale(img_logo,util.scale(img_logo,width=self.unit*15))
+        img_logo = pygame.image.load(data.filepath("title", "imente.png"))
+        img_logo = pygame.transform.smoothscale(
+            img_logo, util.scale(img_logo, width=self.unit*15))
         img_logo_rect = img_logo.get_rect()
         img_logo_rect.centerx = self.screen.get_rect().centerx
         img_logo_rect.centery = self.screen.get_rect().centery
 
-        #settings
+        # settings
         seconds_in = 2
         seconds_still = 1
         seconds_out = 2
@@ -63,7 +66,7 @@ class BootScreen:
             self.screen.blit(img_logo, img_logo_rect)
 
             if logo_alpha == 255 and stop_counter > 0:
-                stop_counter-=1
+                stop_counter -= 1
             else:
                 logo_alpha += logo_alpha_sum
                 if logo_alpha > 255:

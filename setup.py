@@ -13,15 +13,15 @@ MODULES = ["pygame"]
 
 APP = ['yaps.py']
 OPTIONS = {'argv_emulation': False,
-           'packages': PACKAGES ,
-           'includes' : MODULES }
+           'packages': PACKAGES,
+           'includes': MODULES}
 DATA_FILES = []
-DATA_FILES = ["data","lib","local","README.TXT","CHANGELOG.TXT"]
+DATA_FILES = ["data", "lib", "local", "README.TXT", "CHANGELOG.TXT"]
 
 setup(
     app=APP,
     data_files=DATA_FILES,
-    packages = setuptools.find_packages(),
+    packages=setuptools.find_packages(),
     include_package_data=True,
     options={'py2app': OPTIONS},
     setup_requires=['py2app']

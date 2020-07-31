@@ -7,30 +7,31 @@
 
 import os
 
+
 class Constants:
     """ All of the in-game constants are declared here."""
 
     # GAME NAME
     CAPTION = "Yet Another Python Snake"
-    UNITS = 53 # DO NOT MODIFY
+    UNITS = 53  # DO NOT MODIFY
     MAXSCORE = 15
 
     # FPS
     FPS = 15
 
-    ALPHA = (255,255,0)
+    ALPHA = (255, 255, 0)
 
     START_LENGTH = 3
 
-    HIGHSCORES_FILE = os.path.join('local','highscores')
-    PREFERENCES_FILE = os.path.join('local','preferences')
+    HIGHSCORES_FILE = os.path.join('local', 'highscores')
+    PREFERENCES_FILE = os.path.join('local', 'preferences')
 
-    TIMERANGE_WALL = (1,5)
-    TIMERANGE_GOLD = (55,65)
+    TIMERANGE_WALL = (1, 5)
+    TIMERANGE_GOLD = (55, 65)
 
     GROW = 1
 
-    CREDITS = """*Yet Another Python Snake (YAPS v0.92)
+    CREDITS = """*Yet Another Python Snake (YAPS v0.93)
 This game was made, as a personal exercise with python
 and pygame, in a few days in June 2012
 It's free, licensed under MIT Licence

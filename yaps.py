@@ -4,7 +4,7 @@
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Repository: https://github.com/yupswing/yaps
-#  Licence: 
+#  Licence:
 #
 # The MIT License (MIT)
 #
