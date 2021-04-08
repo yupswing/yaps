@@ -23,7 +23,7 @@ class BootScreen:
         self.screen = screen
         self.unit = unit
         self.running = True
-        self.music_player = MusicPlayer("boot.ogg")
+        self.music_player = MusicPlayer("boot")
         self.clock = pygame.time.Clock()
 
     def main(self):

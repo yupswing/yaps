@@ -39,7 +39,7 @@ class Game:
             ('move', 'move.wav'),
             ('splat', 'splat.wav')
         ))
-        self.music = MusicPlayer("game.ogg")
+        self.music = MusicPlayer("game")
 
         self.clock = pygame.time.Clock()
         self.tick = Constants.FPS

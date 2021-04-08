@@ -24,7 +24,7 @@ class TitleScreen:
         self.unit = unit
         self.preferences = preferences
         self.running = True
-        self.music_player = MusicPlayer("title.ogg")
+        self.music_player = MusicPlayer("title")
         self.clock = pygame.time.Clock()
         self.choice = 0
         self.size = self.screen.get_size()

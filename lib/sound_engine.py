@@ -6,6 +6,7 @@
 #
 
 import pygame
+import os
 
 # YASP common imports
 import data
@@ -42,13 +43,16 @@ class SoundPlayer:
             return dummysound()
 
 
-class MusicPlayer:
-    def __init__(self, filename=None):
-        if filename is not None:
-            pygame.mixer.music.load(data.filepath("music", filename))
+EXTENSION = os.name == 'nt' and '.mp3' or '.ogg'
 
-    def load(self, filename):
-        pygame.mixer.music.load(data.filepath("music", filename))
+class MusicPlayer:
+
+    def __init__(self, track=None):
+        if track is not None:
+            self.load(track)
+
+    def load(self, track):
+        pygame.mixer.music.load(data.filepath("music", track + EXTENSION))
 
     def play(self):
         pygame.mixer.music.play(-1)
