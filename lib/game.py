@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -39,7 +39,7 @@ class Game:
             ('move', 'move.wav'),
             ('splat', 'splat.wav')
         ))
-        self.music = MusicPlayer("game.mp3")
+        self.music = MusicPlayer("game.ogg")
 
         self.clock = pygame.time.Clock()
         self.tick = Constants.FPS
@@ -149,10 +149,10 @@ class Game:
 
             # Snake
             if walls.check(snake.head):
-                snake.alive = False
+                snake.is_alive = False
 
             # Snake is dead?
-            if not snake.alive:
+            if not snake.is_alive:
                 # blood splash (bin on head, little on body)
                 pavement.bloodsplat(snake.head)
                 [pavement.bloodsplat(x, 1)
@@ -236,7 +236,7 @@ class Game:
             counter += 1
             # END OF MAIN LOOP
 
-        if not snake.alive:
+        if not snake.is_alive:
 
             self.print_text("GAME OVER")
 

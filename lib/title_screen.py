@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -24,7 +24,7 @@ class TitleScreen:
         self.unit = unit
         self.preferences = preferences
         self.running = True
-        self.music_player = MusicPlayer("title.mp3")
+        self.music_player = MusicPlayer("title.ogg")
         self.clock = pygame.time.Clock()
         self.choice = 0
         self.size = self.screen.get_size()

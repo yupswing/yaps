@@ -1,6 +1,6 @@
 #
-#  YetAnotherPythonSnake 0.93
-#  Author: Simone Cingano (simonecingano@gmail.com)
+#  YetAnotherPythonSnake 0.94
+#  Author: Simone Cingano (me@simonecingano.it)
 #  Web: http://simonecingano.it
 #  Licence: MIT
 #
@@ -31,7 +31,7 @@ class Constants:
 
     GROW = 1
 
-    CREDITS = """*Yet Another Python Snake (YAPS v0.93)
+    CREDITS = """*Yet Another Python Snake (YAPS v0.94)
 This game was made, as a personal exercise with python
 and pygame, in a few days in June 2012
 It's free, licensed under MIT Licence

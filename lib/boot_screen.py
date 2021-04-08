@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -23,7 +23,7 @@ class BootScreen:
         self.screen = screen
         self.unit = unit
         self.running = True
-        self.music_player = MusicPlayer("boot.mp3")
+        self.music_player = MusicPlayer("boot.ogg")
         self.clock = pygame.time.Clock()
 
     def main(self):

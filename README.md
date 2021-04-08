@@ -1,13 +1,13 @@
-<img src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.93-brightgreen.svg">
+<img src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.94-brightgreen.svg">
 <a href="blob/master/LICENCE"><img src="https://img.shields.io/badge/licence-MIT-blue.svg"></a>
-<a href="https://www.python.org/download/releases/2.7/"><img src="https://img.shields.io/badge/language-python%202.7-green.svg"></a><br/>
-<a href="http://pygame.org/"><img src="https://img.shields.io/badge/require-pygame-red.svg"></a>
+<a href="https://www.python.org/download/releases/3.9/"><img src="https://img.shields.io/badge/language-python%203.9-green.svg"></a><br/>
+<a href="http://pygame.org/"><img src="https://img.shields.io/badge/require-pygame$202.0-red.svg"></a>
 <img src="https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-lightgrey.svg">
 <img src="https://img.shields.io/badge/release-source%20code%20only-yellow.svg">
 
 <img src="https://raw.githubusercontent.com/yupswing/yaps/master/data/title/credits.png" width="100%">
 
-**YetAnotherPythonSnake** 0.93<br/>
+**YetAnotherPythonSnake** 0.94<br/>
 **Author:** Simone Cingano (simonecingano@gmail.com) (https://simonecingano.it)<br/>
 **Pygame Page:** https://www.pygame.org/project-YetAnotherPythonSnake-2393-.html<br/>
 **GIT Repository:** https://github.com/yupswing/yaps<br/>
@@ -26,7 +26,7 @@ You might need to install some of these before running the game:
 **Python:** https://www.python.org/<br/>
 **PyGame:** https://www.pygame.org/
 
-Game tested on Python 2.7/3.8 and PyGame 1.9 on Linux and Mac OS X<br/>
+Game tested on Python 3.9 and PyGame 2.0 on Linux and Windows<br/>
 
 ## RUNNING THE GAME
 
@@ -64,15 +64,19 @@ NLM, Setuniman, Rock Savage, j1987, qubodup, theta4, Freqman <br/>
 "Close up grass" by Sam Kim <br/>
 (CC) flickr.com"
 
-PS: There is no active website, I'm workin' on it
-
 ## CHANGELOG
+
+**YAPS 0.94** [2021/04/08]
+
+- python 3.9 compatible
+- pygame 2.0 compatible
+- converted mp3 to ogg
 
 **YAPS 0.93** [2020/07/31]
 
 - fix highscore
 - clean up code
-- testing python 3.8
+- python 3.8 compatible
 
 **YAPS 0.92** [2015/01/14]
 

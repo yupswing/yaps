@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -46,7 +46,7 @@ class Walls(object):
     def update(self):
         self.group.update()
         for el in self.group:
-            if el.alive == 0:
+            if el.is_alive == 0:
                 self.group.remove(el)
                 self.refresh.append(util.coord2pos(
                     self.unit, [el.rect.x, el.rect.y]))
@@ -73,7 +73,7 @@ class WallBlock(pygame.sprite.DirtySprite):
         if self.kind == WallBlockKind.SOLID:
             color = (0, 0, 0)
             color2 = (100, 100, 100)
-            self.alive = -1  # forever
+            self.is_alive = -1  # forever
 
         self.layer = 10
         self.dirty = 1
@@ -85,5 +85,5 @@ class WallBlock(pygame.sprite.DirtySprite):
         pygame.draw.rect(self.image, color2, (offset, offset, size, size), 0)
 
     def update(self):
-        if self.alive > 0:
-            self.alive -= 1
+        if self.is_alive > 0:
+            self.is_alive -= 1

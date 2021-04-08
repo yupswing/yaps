@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT

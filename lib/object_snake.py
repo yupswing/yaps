@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -28,7 +28,7 @@ class Snake(object):
 
     def __init__(self, unit):
         self.unit = unit
-        self.alive = True
+        self.is_alive = True
 
         # Initial orientation
         self.vx = 0
@@ -123,7 +123,7 @@ class Snake(object):
         next = [self.get_x()+self.vx, self.get_y()+self.vy]
 
         if next in self.body:
-            self.alive = False
+            self.is_alive = False
 
         # exit left, appear right and so on
         if next[0] < 0:

@@ -1,5 +1,5 @@
 #
-#  YetAnotherPythonSnake 0.93
+#  YetAnotherPythonSnake 0.94
 #  Author: Simone Cingano (simonecingano@gmail.com)
 #  Web: http://simonecingano.it
 #  Licence: MIT
@@ -59,7 +59,7 @@ class Foods(object):
     def update(self):
         self.group.update()
         for el in self.group:
-            if el.alive == 0:
+            if el.is_alive == 0:
                 self.group.remove(el)
                 self.refresh.append(util.coord2pos(
                     self.unit, [el.rect.x, el.rect.y]))
@@ -90,12 +90,12 @@ class FoodBlock(pygame.sprite.DirtySprite):
             color = (184, 11, 8)
             color2 = (5, 113, 10)
             self.score = 1
-            self.alive = -1  # forever
+            self.is_alive = -1  # forever
         elif self.kind == FoodBlockKind.GOLD:
             color = (30, 106, 140)
             color2 = (244, 214, 53)
             self.score = 5
-            self.alive = Constants.FPS * 5  # 5 seconds
+            self.is_alive = Constants.FPS * 5  # 5 seconds
 
         self.layer = 10
         self.dirty = 2
@@ -108,5 +108,5 @@ class FoodBlock(pygame.sprite.DirtySprite):
                                               0, int(size/3), int(size/2)), 0)
 
     def update(self):
-        if self.alive > 0:
-            self.alive -= 1
+        if self.is_alive > 0:
+            self.is_alive -= 1
