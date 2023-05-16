@@ -1,9 +1,9 @@
-<img src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.94-brightgreen.svg">
-<a href="blob/master/LICENCE"><img src="https://img.shields.io/badge/licence-MIT-blue.svg"></a>
-<a href="https://www.python.org/download/releases/3.9/"><img src="https://img.shields.io/badge/language-python%203.9-green.svg"></a><br/>
-<a href="http://pygame.org/"><img src="https://img.shields.io/badge/require-pygame%202.0-red.svg"></a>
-<img src="https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-lightgrey.svg">
-<img src="https://img.shields.io/badge/release-source%20code%20only-yellow.svg">
+<img align="left" src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.94-brightgreen.svg">
+<a href="blob/master/LICENCE"><img align="left" src="https://img.shields.io/badge/licence-MIT-blue.svg"></a>
+<a href="https://www.python.org/download/releases/3.9/"><img align="left" src="https://img.shields.io/badge/language-python%203.9-green.svg"></a><br/>
+<a href="http://pygame.org/"><img align="left" src="https://img.shields.io/badge/require-pygame%202.0-red.svg"></a>
+<img align="left" src="https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-lightgrey.svg">
+<img align="left" src="https://img.shields.io/badge/release-source%20code%20only-yellow.svg">
 
 <img src="https://raw.githubusercontent.com/yupswing/yaps/master/data/title/credits.png" width="100%">
 
