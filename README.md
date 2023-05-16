@@ -1,7 +1,7 @@
 <img src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.94-brightgreen.svg">
 <a href="blob/master/LICENCE"><img src="https://img.shields.io/badge/licence-MIT-blue.svg"></a>
 <a href="https://www.python.org/download/releases/3.9/"><img src="https://img.shields.io/badge/language-python%203.9-green.svg"></a><br/>
-<a href="http://pygame.org/"><img src="https://img.shields.io/badge/require-pygame$202.0-red.svg"></a>
+<a href="http://pygame.org/"><img src="https://img.shields.io/badge/require-pygame%202.0-red.svg"></a>
 <img src="https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-lightgrey.svg">
 <img src="https://img.shields.io/badge/release-source%20code%20only-yellow.svg">
 
@@ -24,9 +24,9 @@
 You might need to install some of these before running the game:
 
 **Python:** https://www.python.org/<br/>
-**PyGame:** https://www.pygame.org/
+**PyGame:** https://www.pygame.org/ (you can use pip to install pygame)
 
-Game tested on Python 3.9 and PyGame 2.0 on Linux and Windows<br/>
+Game tested on Python 3.9 (3.9.16) and PyGame 2 (2.4) on Linux and Windows<br/>
 
 ## RUNNING THE GAME
 
