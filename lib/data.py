@@ -6,7 +6,9 @@
 #
 
 import os
-data_dir = 'data'
+import sys
+
+data_dir = os.path.join(getattr(sys, '_MEIPASS', '.'), 'data')
 
 
 def filepath(kind, filename):

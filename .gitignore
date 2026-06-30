@@ -12,3 +12,6 @@ dist/
 
 # Env configuration
 .vscode/
+
+# venv
+venv/

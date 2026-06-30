@@ -1,14 +1,14 @@
-<img align="left" src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.94-brightgreen.svg">
-<a href="blob/master/LICENCE"><img align="left" src="https://img.shields.io/badge/licence-MIT-blue.svg"></a>
-<a href="https://www.python.org/download/releases/3.9/"><img align="left" src="https://img.shields.io/badge/language-python%203.9-green.svg"></a><br/>
-<a href="http://pygame.org/"><img align="left" src="https://img.shields.io/badge/require-pygame%202.0-red.svg"></a>
-<img align="left" src="https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-lightgrey.svg">
-<img align="left" src="https://img.shields.io/badge/release-source%20code%20only-yellow.svg">
+<img src="https://img.shields.io/badge/app-Yet%20Another%20Python%20Snake%200.94-brightgreen.svg">
+<a href="blob/master/LICENCE"><img src="https://img.shields.io/badge/licence-MIT-blue.svg"></a>
+<a href="https://www.python.org/download/releases/3.12/"><img src="https://img.shields.io/badge/language-python%203.12-green.svg"></a><br/>
+<a href="http://pygame.org/"><img src="https://img.shields.io/badge/require-pygame$202.6-red.svg"></a>
+<img src="https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-lightgrey.svg">
+<img src="https://img.shields.io/badge/release-source%20code%20only-yellow.svg">
 
 <img src="https://raw.githubusercontent.com/yupswing/yaps/master/data/title/credits.png" width="100%">
 
 **YetAnotherPythonSnake** 0.94<br/>
-**Author:** Simone Cingano (simonecingano@gmail.com) (https://simonecingano.it)<br/>
+**Author:** Simone Cingano (me@simonecingano.it) (https://simonecingano.it)<br/>
 **Pygame Page:** https://www.pygame.org/project-YetAnotherPythonSnake-2393-.html<br/>
 **GIT Repository:** https://github.com/yupswing/yaps<br/>
 **Licence:** MIT
@@ -26,12 +26,26 @@ You might need to install some of these before running the game:
 **Python:** https://www.python.org/<br/>
 **PyGame:** https://www.pygame.org/ (you can use pip to install pygame)
 
-Game tested on Python 3.9 (3.9.16) and PyGame 2 (2.4) on Linux and Windows<br/>
+Game tested on Python 3.12 and PyGame 2.6 on Windows<br/>
+
+```
+py install 3.12
+py -3.12 -m venv venv
+venv\Scripts\Activate.ps1
+pip install pygame
+```
 
 ## RUNNING THE GAME
 
 Open a terminal/console and "cd" to the game directory and run:
 `python yaps.py`
+
+## BUILDING THE GAME
+
+```
+pip install pyinstaller
+pyinstaller yaps.spec --noconfirm
+```
 
 ## HOW TO PLAY THE GAME
 
